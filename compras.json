@@ -138,5 +138,19 @@
                 "precioCompra": 20
             }
         ]
+    },
+    {
+        "fechaCompra": "07-08-2023",
+        "proveedor": {
+            "nombre": "Jesus",
+            "contacto": "3117638907"
+        },
+        "medicamentosComprados": [
+            {
+                "nombreMedicamento": "ibupofreno",
+                "cantidadComprada": 1,
+                "precioCompra": "25"
+            }
+        ]
     }
 ]

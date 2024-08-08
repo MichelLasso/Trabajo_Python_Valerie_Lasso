@@ -13,5 +13,10 @@
         "nombre": "ProveedorC",
         "contacto": "contacto@proveedorc.com",
         "direccion": "Calle Proveedor 123"
+    },
+    {
+        "nombre": "Jesus",
+        "contacto": "3117638907",
+        "direccion": "carrera 7 barrio la esperanza"
     }
 ]

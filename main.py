@@ -90,15 +90,47 @@ if opcion==2:
     system("cls")
     print("|Registrar Compras|")
     print("")
-    fechaVenta= str(input("Fecha: "))
+    fechaCompra= str(input("Fecha: "))
     print("")
     print("Información del Provedor")
     print("")
-    nombrePaciente= str(input("Nombre: "))
+    nombreProvedor= str(input("Nombre: "))
     contactoProvedor= str(input("Contacto: "))
+    direccionprovedor= str(input("Dirección: "))
     print("")
     print("Información del Medicamento Comprado")
     print("")
     nombreCompraM= str(input("Nombre: "))
     cantidadCompra= int(input("Cantidad: "))
     precioCompra=str(input("Precio de compra: "))
+
+    compraAgg= {
+        "fechaCompra": fechaCompra,
+        "proveedor": {
+            "nombre": nombreProvedor,
+            "contacto": contactoProvedor
+        },
+        "medicamentosComprados": [
+            {
+                "nombreMedicamento": nombreCompraM,
+                "cantidadComprada": cantidadCompra,
+                "precioCompra": precioCompra
+            }
+        ]
+    }
+
+    comprajson +=[compraAgg]
+
+    with open("compras.json","w") as outfile:
+        json.dump(comprajson, outfile, indent=4)
+
+    provedor={
+        "nombre": nombreProvedor,
+        "contacto": contactoProvedor,
+        "direccion": direccionprovedor
+    }
+
+    provedoresjson +=[provedor]
+
+    with open("provedores.json","w") as outfile:
+        json.dump(provedoresjson, outfile, indent=4)
