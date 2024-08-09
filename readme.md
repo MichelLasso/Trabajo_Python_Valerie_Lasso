@@ -48,7 +48,9 @@ Este trabajo cumple con las siguientes características dadas por el cliente :
 * Ingresar la cantidad del producto comprado
 
 *Lista de empleados*
+
 *Lista de pacientes*
+
 *Lista de los medicamentos*
 
 ## Instalación 
