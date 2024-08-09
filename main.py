@@ -19,15 +19,22 @@ with open ("provedores.json", "r") as openfile:
 with open("ventas.json","r") as openfile:
     ventasjson= json.load(openfile)
 
-print("|Farmacia|")
+print("─── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ──")
+print("                   Farmacia                  ")
+print("─── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ───── ⋆⋅☆⋅⋆ ──")
 print("")
 print("1. Registrar Ventas")
 print("2. Registrar Compras")
+print("3. Ver medicamentos")
+print("4. Ver provedores")
+print("5. Ver pacientes")
+print("6. Ver empleados")
+print("")
 
 opcion=int(input("Ingrese el número de la opción que deseas ver: "))
 if opcion==1:
     system("cls")
-    print("|Registrar Ventas|")
+    print("─── ⋆⋅☆⋅⋆ ──Registrar Ventas─── ⋆⋅☆⋅⋆ ──")
     print("")
     fechaVenta= str(input("Fecha: "))
     print("")
@@ -47,6 +54,7 @@ if opcion==1:
     nombreMedicamento= str(input("Nombre: "))
     cantidadVenta= int(input("Cantidad: "))
     precioVenta=str(input("Precio: "))
+
     #agregar un paciente nuevo al json de pacientes
     ventaPaciente= {
         "nombre": nombrePaciente,
@@ -59,7 +67,6 @@ if opcion==1:
         json.dump(pacientesjson, outfile, indent=4)
 
     venta={
-        {
         "fechaVenta": fechaVenta,
         "paciente": {
             "nombre": nombrePaciente,
@@ -77,18 +84,17 @@ if opcion==1:
             }
         ]
     }
-    }
+    
 
     ventasjson +=[venta]
     
     with open("ventas.json","w") as outfile:
         json.dump(ventasjson, outfile, indent=4)
    
-
     
 if opcion==2:
     system("cls")
-    print("|Registrar Compras|")
+    print("─── ⋆⋅☆⋅⋆ ──Registrar Compras─── ⋆⋅☆⋅⋆ ──")
     print("")
     fechaCompra= str(input("Fecha: "))
     print("")
@@ -134,3 +140,65 @@ if opcion==2:
 
     with open("provedores.json","w") as outfile:
         json.dump(provedoresjson, outfile, indent=4)
+
+if opcion==3:
+    contador=1
+    system("cls")
+    print("─── ⋆⋅☆⋅⋆ ──Medicamentos─── ⋆⋅☆⋅⋆ ──")
+    print("")
+
+    for i in medicamentosjson:
+
+        print(contador)
+        print(f"Nombre del medicamento: {i["nombre"]}")
+        print(f"Precio: {i["precio"]}")
+        print(f"Stock: {i["stock"]}")
+        print("˗ˏˋ ★ ˎˊ˗")
+        print("")
+        contador=contador+1
+
+if opcion==4:
+    system("cls")
+    print("─── ⋆⋅☆⋅⋆ ──Provedores─── ⋆⋅☆⋅⋆ ──")
+    print("")
+    contador=1
+    for i in provedoresjson:
+
+        print(contador)
+        print(f"{i["nombre"]}")
+        print(f"Contacto: {i["contacto"]}")
+        print(f"Dirección: {i["direccion"]}")
+        print("˗ˏˋ ★ ˎˊ˗")
+        print("")
+        contador=contador+1
+if opcion==5:
+
+    system("cls")
+    print("─── ⋆⋅☆⋅⋆ ──Pacientes─── ⋆⋅☆⋅⋆ ──")
+    print("")
+    contador=1
+    for i in pacientesjson:
+
+        print(contador)
+        print(f"Nombre: {i["nombre"]}")
+        print(f"Telefono: {i["telefono"]}")
+        print(f"Dirección: {i["direccion"]}")
+        print("˗ˏˋ ★ ˎˊ˗")
+        print("")
+        contador=contador+1
+
+if opcion==6:
+
+    system("cls")
+    print("─── ⋆⋅☆⋅⋆ ──Empleados─── ⋆⋅☆⋅⋆ ──")
+    print("")
+    contador=1
+    for i in empleadosjson:
+
+        print(contador)
+        print(f"Nombre: {i["nombre"]}")
+        print(f"Fecha del contrato: {i["fechaContratacion"]}")
+        print(f"Cargo: {i["cargo"]}")
+        print("˗ˏˋ ★ ˎˊ˗")
+        print("")
+        contador=contador+1

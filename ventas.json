@@ -183,5 +183,41 @@
                 "precio": 20
             }
         ]
+    },
+    {
+        "fechaVenta": "2024-07-04",
+        "paciente": {
+            "nombre": "valerie",
+            "direccion": "cra7"
+        },
+        "empleado": {
+            "nombre": "luis",
+            "cargo": "cajero"
+        },
+        "medicamentosVendidos": [
+            {
+                "nombreMedicamento": "ibupofreno",
+                "cantidadVendida": 4,
+                "precio": "200"
+            }
+        ]
+    },
+    {
+        "fechaVenta": "2024-04-01",
+        "paciente": {
+            "nombre": "valerie",
+            "direccion": "cra8"
+        },
+        "empleado": {
+            "nombre": "jesus",
+            "cargo": "cajero"
+        },
+        "medicamentosVendidos": [
+            {
+                "nombreMedicamento": "ibupofreno",
+                "cantidadVendida": 4,
+                "precio": "200"
+            }
+        ]
     }
 ]
