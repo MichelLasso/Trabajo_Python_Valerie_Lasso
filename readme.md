@@ -47,9 +47,9 @@ Este trabajo cumple con las siguientes características dadas por el cliente :
 * Ingresar el nombre del producto comprado 
 * Ingresar la cantidad del producto comprado
 
-* Lista de empleados
-* Lista de pacientes
-* Lista de los medicamentos
+*Lista de empleados*
+*Lista de pacientes*
+*Lista de los medicamentos*
 
 ## Instalación 
 1. Clona el repositorio: Utiliza el comando "git clone" seguido de la URL del repositorio para clonar el proyecto en tu computadora local.
