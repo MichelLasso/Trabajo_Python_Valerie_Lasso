@@ -28,5 +28,20 @@
         "nombre": "luis",
         "direccion": "carrera 7 barrio1",
         "telefono": 3227463789
+    },
+    {
+        "nombre": "valerie",
+        "direccion": "cr23 07",
+        "telefono": "2753884675"
+    },
+    {
+        "nombre": "valerie",
+        "direccion": "cra7",
+        "telefono": "234566"
+    },
+    {
+        "nombre": "valerie",
+        "direccion": "cra8",
+        "telefono": "311788889"
     }
 ]
